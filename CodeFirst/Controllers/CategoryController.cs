@@ -47,7 +47,10 @@ namespace CodeFirst.Controllers
         public ActionResult Details(long id)
         {
           Category c = db.Categories.Where(x => x.CategoryID == id).FirstOrDefault();
-          return View(c);
+          if (c != null)
+            return View(c);
+          else
+            return new HttpNotFoundResult();
         }
 
         public ActionResult Edit(long id)

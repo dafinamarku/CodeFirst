@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using CodeFirst.Models;
 
+
 namespace CodeFirst.Controllers
 {
     public class ProductController : Controller
@@ -41,9 +42,19 @@ namespace CodeFirst.Controllers
         [HttpPost]
         public ActionResult Create(Product p)
         {
-          db.Products.Add(p);
-          db.SaveChanges();
-          return RedirectToAction("ListOfProducts");
+          if (ModelState.IsValid)
+          {
+            db.Products.Add(p);
+            db.SaveChanges();
+            return RedirectToAction("ListOfProducts");
+          }
+          else
+          {
+            ViewBag.Categories = new SelectList(db.Categories, "CategoryID", "CategoryName");
+            ViewBag.Brands = new SelectList(db.Brands, "BrandID", "BrandName");
+            return View();
+          }
+         
         }
 
         public ActionResult Edit(long id)

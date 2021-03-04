@@ -84,3 +84,4 @@ C:\Users\user\source\repos\CodeFirst\CodeFirst\obj\Debug\CodeFirst.dll
 C:\Users\user\source\repos\CodeFirst\CodeFirst\obj\Debug\CodeFirst.pdb
 C:\Users\user\source\repos\CodeFirst\CodeFirst\obj\Debug\CodeFirst.Migrations.DB.resources
 C:\Users\user\source\repos\CodeFirst\CodeFirst\obj\Debug\CodeFirst.csproj.GenerateResource.cache
+C:\Users\user\source\repos\CodeFirst\CodeFirst\obj\Debug\CodeFirst.Migrations.ProductUpdate.resources
